@@ -41,7 +41,7 @@ Return ONLY raw JSON:
       "question": "the actual question"
     }
   ],
-  "openingMessage": "Warm natural opener. Make candidate comfortable. Do not mention scoring.",
+  "openingMessage": "Warm natural opener. Make candidate comfortable. Do not mention scoring.Do not include Candidate name or company name. Keep it generic.",
   "closingMessage": "Natural message telling candidate their answers are being evaluated."
 }
 

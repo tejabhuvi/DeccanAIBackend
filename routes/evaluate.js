@@ -108,8 +108,14 @@ async function generateLearningPlan(evaluation, analysis) {
   const gaps = evaluation.skillScores.filter(s => s.score < 7 && s.gap);
 
   if (gaps.length === 0) {
-    return { message: "No significant gaps found. Candidate is well-prepared for this role." };
-  }
+  return {
+    learningPlan: [],
+    totalEstimatedWeeks: 0,
+    learningOrder: [],
+    quickWins: [],
+    finalAdvice: "No significant gaps found. The candidate is well-prepared for this role.",
+  };
+}
 
   const prompt = `
 You are a learning advisor creating a personalised learning plan for a ${analysis.jobTitle} candidate.
